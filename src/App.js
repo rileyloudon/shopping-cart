@@ -176,7 +176,14 @@ const App = () => {
 
   const addToCart = (item, quantity) => {
     const currentCart = cart;
-    currentCart.push({ item: item, quantity: quantity });
+    const repeatItem = currentCart.findIndex(
+      (cartItem) => cartItem.item.name === item.name
+    );
+
+    repeatItem === -1
+      ? currentCart.push({ item: item, quantity: quantity })
+      : (currentCart[repeatItem].quantity += parseInt(quantity));
+
     setCart(currentCart);
   };
 
