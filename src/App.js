@@ -181,7 +181,7 @@ const App = () => {
     );
 
     repeatItem === -1
-      ? currentCart.push({ item: item, quantity: quantity })
+      ? currentCart.push({ item: item, quantity: parseInt(quantity) })
       : (currentCart[repeatItem].quantity += parseInt(quantity));
 
     setCart(currentCart);
