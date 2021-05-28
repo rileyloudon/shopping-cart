@@ -5,6 +5,7 @@ import Home from './components/home';
 import Shop from './components/shop';
 import ItemPage from './components/item-page';
 import Checkout from './components/checkout';
+import OrderSuccess from './components/order-success';
 import './App.css';
 
 const App = () => {
@@ -187,6 +188,11 @@ const App = () => {
     setCart(currentCart);
   };
 
+  const completeOrder = (history) => {
+    setCart([]);
+    history.push('/order-confirmation');
+  };
+
   return (
     <BrowserRouter>
       <div className='App'>
@@ -201,7 +207,12 @@ const App = () => {
               <ItemPage {...props} shopItems={shopItems} addToCart={addToCart} />
             )}
           />
-          <Route exact path='/checkout' render={() => <Checkout cart={cart} />} />
+          <Route
+            exact
+            path='/checkout'
+            render={() => <Checkout cart={cart} completeOrder={completeOrder} />}
+          />
+          <Route exact path='/order-confirmation' component={OrderSuccess} />
         </Switch>
       </div>
     </BrowserRouter>
