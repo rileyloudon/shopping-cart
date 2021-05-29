@@ -176,7 +176,7 @@ const App = () => {
   ]);
 
   const addToCart = (item, quantity) => {
-    const currentCart = cart;
+    const currentCart = [...cart];
     const repeatItem = currentCart.findIndex(
       (cartItem) => cartItem.item.name === item.name
     );
@@ -196,7 +196,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className='App'>
-        <Navigation />
+        <Navigation cart={cart} />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/shop' render={() => <Shop shopItems={shopItems} />} />
