@@ -1,8 +1,8 @@
 :root {
   --black: #2c2c2c;
   --white: #ccc;
-  /* --blue: #3185fc; */
   --blue: #34bfff;
+  --blue2: #002efc;
 }
 
 /* Global */
@@ -87,12 +87,12 @@ nav p {
 }
 
 input[type='number'] {
-  margin-left: 20px;
+  border: 1px solid var(--white);
   color: var(--white);
+  margin-left: 20px;
   background-color: transparent;
   padding: 8px;
   font-size: 16px;
-  border: 1px solid var(--white);
   border-radius: 8px;
 }
 
@@ -119,5 +119,40 @@ input[type='number'] {
 
   .shop-item img {
     width: 60px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  h2,
+  h3,
+  p,
+  button,
+  label {
+    color: var(--black);
+  }
+
+  button {
+    border: 1px solid var(--black);
+  }
+
+  nav a {
+    color: var(--black);
+  }
+
+  nav p {
+    color: var(--blue2);
+  }
+
+  nav img {
+    filter: invert(1);
+  }
+
+  input[type='number'] {
+    border: 1px solid var(--black);
+    color: var(--black);
+  }
+
+  .total {
+    color: var(--blue2);
   }
 }
