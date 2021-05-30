@@ -1,3 +1,123 @@
+:root {
+  --black: #2c2c2c;
+  --white: #ccc;
+  /* --blue: #3185fc; */
+  --blue: #34bfff;
+}
+
+/* Global */
 .App {
   text-align: center;
+}
+
+h2,
+h3,
+p,
+button,
+label {
+  color: var(--white);
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 8px;
+  border: 1px solid var(--white);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Naviagation */
+nav {
+  width: fit-content;
+  margin: auto;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 25px;
+}
+
+nav p {
+  color: var(--blue);
+  padding-left: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Home */
+.home img {
+  width: 75vw;
+  max-width: 1080px;
+}
+
+/* Shop */
+.shop-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1500px;
+  margin: auto;
+}
+
+.shop-item {
+  cursor: pointer;
+  max-width: fit-content;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+/* Item Page */
+.item-page {
+  margin: auto;
+  margin-top: 25px;
+  max-width: max-content;
+  padding: 0 15px;
+}
+
+.item-page button:first-of-type {
+  display: block;
+}
+
+.item-page .quantity-form {
+  margin-bottom: 20px;
+}
+
+input[type='number'] {
+  margin-left: 20px;
+  color: var(--white);
+  background-color: transparent;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid var(--white);
+  border-radius: 8px;
+}
+
+.item-page button.sold-out {
+  cursor: not-allowed;
+}
+
+/* Checkout */
+.total {
+  color: var(--blue);
+  font-size: 1.1em;
+}
+
+/* Order Confirmation */
+.success img {
+  width: 85vw;
+  max-width: 1080px;
+}
+
+@media (max-width: 710px) {
+  .shop-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shop-item img {
+    width: 60px;
+  }
 }
