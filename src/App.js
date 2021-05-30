@@ -5,7 +5,7 @@ import Home from './components/home';
 import Shop from './components/shop';
 import ItemPage from './components/item-page';
 import Checkout from './components/checkout';
-import OrderSuccess from './components/order-success';
+import OrderConfirmation from './components/order-confirmation';
 import './App.css';
 
 const App = () => {
@@ -212,7 +212,7 @@ const App = () => {
             path='/checkout'
             render={() => <Checkout cart={cart} completeOrder={completeOrder} />}
           />
-          <Route exact path='/order-confirmation' component={OrderSuccess} />
+          <Route exact path='/order-confirmation' component={OrderConfirmation} />
         </Switch>
       </div>
     </BrowserRouter>

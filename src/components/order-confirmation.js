@@ -1,6 +1,6 @@
 import order from '../img/order-pikachu.svg';
 
-const OrderSuccess = () => {
+const OrderConfirmation = () => {
   return (
     <div className='success'>
       <h2>Thank you for your purchase!</h2>
@@ -9,4 +9,4 @@ const OrderSuccess = () => {
   );
 };
 
-export default OrderSuccess;
+export default OrderConfirmation;
