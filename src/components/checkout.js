@@ -1,4 +1,7 @@
-const CartWithItems = ({ cart }) => {
+import { useHistory } from 'react-router-dom';
+
+const CartWithItems = ({ cart, completeOrder }) => {
+  let history = useHistory();
   const totalPrice = cart.reduce(
     (total, { quantity, item }) => total + item.price * quantity,
     0
@@ -14,7 +17,7 @@ const CartWithItems = ({ cart }) => {
         ))}
       </div>
       <p className='total'>{`Total - ₽  ${totalPrice.toLocaleString()}`}</p>
-      <button>Purchase</button>
+      <button onClick={() => completeOrder(history)}>Purchase</button>
     </div>
   );
 };
@@ -23,11 +26,15 @@ const EmptyCart = () => {
   return <p>Your cart is empty</p>;
 };
 
-const Checkout = ({ cart }) => {
+const Checkout = ({ cart, completeOrder }) => {
   return (
     <>
-      <h1>Your Cart</h1>
-      {cart.length ? <CartWithItems cart={cart} /> : <EmptyCart />}
+      <h2>Your Cart</h2>
+      {cart.length ? (
+        <CartWithItems cart={cart} completeOrder={completeOrder} />
+      ) : (
+        <EmptyCart />
+      )}
     </>
   );
 };
