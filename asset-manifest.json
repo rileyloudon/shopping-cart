@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.9d6785d8.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.8f0df739.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.8f0df739.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.8fe60f94.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.8fe60f94.js.map",
+    "static/js/2.6821a7ef.chunk.js": "/shopping-cart/static/js/2.6821a7ef.chunk.js",
+    "static/js/2.6821a7ef.chunk.js.map": "/shopping-cart/static/js/2.6821a7ef.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.9d6785d8.chunk.css.map": "/shopping-cart/static/css/main.9d6785d8.chunk.css.map",
+    "static/js/2.6821a7ef.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.6821a7ef.chunk.js.LICENSE.txt",
+    "static/media/order-pikachu.0e1615cd.svg": "/shopping-cart/static/media/order-pikachu.0e1615cd.svg",
+    "static/media/pokemart.bf66efdf.jpg": "/shopping-cart/static/media/pokemart.bf66efdf.jpg",
+    "static/media/shopping_cart_24dp.f3d72284.svg": "/shopping-cart/static/media/shopping_cart_24dp.f3d72284.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8fe60f94.js",
+    "static/js/2.6821a7ef.chunk.js",
+    "static/css/main.9d6785d8.chunk.css",
+    "static/js/main.8f0df739.chunk.js"
+  ]
+}
