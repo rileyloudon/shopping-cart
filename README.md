@@ -15,4 +15,6 @@ Includes four pages:
   <img src=./public/img/quick-look.png>
 </div>
 
+<br>
+
 Made for The Odin Project with ReactJS - [Project Requirements](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/shopping-cart)
