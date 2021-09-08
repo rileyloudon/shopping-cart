@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Navigation from './components/navigation';
 import Home from './components/home';
 import Shop from './components/shop';
@@ -194,28 +194,26 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <div className='App'>
-        <Navigation cart={cart} />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/shop' render={() => <Shop shopItems={shopItems} />} />
-          <Route
-            exact
-            path='/shop/:name'
-            render={(props) => (
-              <ItemPage {...props} shopItems={shopItems} addToCart={addToCart} />
-            )}
-          />
-          <Route
-            exact
-            path='/checkout'
-            render={() => <Checkout cart={cart} completeOrder={completeOrder} />}
-          />
-          <Route exact path='/order-confirmation' component={OrderConfirmation} />
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <div className='App'>
+      <Navigation cart={cart} />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/shop' render={() => <Shop shopItems={shopItems} />} />
+        <Route
+          exact
+          path='/shop/:name'
+          render={(props) => (
+            <ItemPage {...props} shopItems={shopItems} addToCart={addToCart} />
+          )}
+        />
+        <Route
+          exact
+          path='/checkout'
+          render={() => <Checkout cart={cart} completeOrder={completeOrder} />}
+        />
+        <Route exact path='/order-confirmation' component={OrderConfirmation} />
+      </Switch>
+    </div>
   );
 };
 
